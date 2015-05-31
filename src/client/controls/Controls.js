@@ -57,10 +57,10 @@
 		var instance;
 
 		// an emulation of static variables and methods
-		var _static = {   
+		var _static = {
 			name: "VIZI.Controls",
 
-			// Method for getting an instance. It returns 
+			// Method for getting an instance. It returns
 			// a singleton instance of a singleton object
 			getInstance: function() {
 				if ( instance  ===  undefined )  {

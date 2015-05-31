@@ -51,9 +51,9 @@
 			}, false);
 
 			// Prefer wheel event, but fallback to mousewheel event if necessary
-			var wheel_event = "wheel"; 
+			var wheel_event = "wheel";
 			if (window.onwheel === undefined) {
-				wheel_event = "mousewheel"; 
+				wheel_event = "mousewheel";
 			}
 
 			domElement.addEventListener(wheel_event, function(event) {
@@ -129,7 +129,7 @@
 
 				state.pos3dDelta.x = state.downPos3d.x - pos3d.x;
 				state.pos3dDelta.y = state.downPos3d.y - pos3d.y;
-				state.pos3dDelta.z = state.downPos3d.z - pos3d.z;	
+				state.pos3dDelta.z = state.downPos3d.z - pos3d.z;
 			}
 		};
 
@@ -160,12 +160,12 @@
 
 			var state = this.state;
 
-			// Wheel event 
+			// Wheel event
 			if (event.deltaY !== undefined) {
 
 				state.wheelDelta -= event.deltaY;
-			
-			// MouseWheel Event 
+
+			// MouseWheel Event
 			} else {
 
 				state.wheelDelta += event.wheelDeltaY;
@@ -183,7 +183,7 @@
 			state.pos3dDelta.x = 0;
 			state.pos3dDelta.y = 0;
 			state.pos3dDelta.z = 0;
-			
+
 			state.wheelDelta = 0;
 		};
 
@@ -224,10 +224,10 @@
 		var instance;
 
 		// an emulation of static variables and methods
-		var _static = {   
+		var _static = {
 			name: "VIZI.Mouse",
 
-			// Method for getting an instance. It returns 
+			// Method for getting an instance. It returns
 			// a singleton instance of a singleton object
 			getInstance: function(domElement, camera) {
 				if ( instance  ===  undefined )  {
