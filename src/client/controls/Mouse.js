@@ -60,6 +60,13 @@
 				self.onMouseWheel(event);
 			}, false);
 
+			domElement.addEventListener('contextmenu', function(event){
+				if(event.button === 2){
+					event.preventDefault();
+					return false;
+				}
+			});
+
 		};
 
 		Mouse.prototype.onMouseDown = function(event) {
@@ -123,7 +130,7 @@
 			state.pos3d.y = pos3d.y;
 			state.pos3d.z = pos3d.z;
 
-			if (state.buttons.left || state.buttons.middle) {
+			if (state.buttons.left || state.buttons.middle || state.buttons.right) {
 				state.downPos2dDelta.x = event.clientX - state.downPos2d.x;
 				state.downPos2dDelta.y = event.clientY - state.downPos2d.y;
 

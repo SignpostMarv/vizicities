@@ -42,7 +42,7 @@
 			}
 
 			// Orbit
-			if ((mouseState.buttons.left && keyboardState.keys.shift) || mouseState.buttons.middle) {
+			if ((mouseState.buttons.left && keyboardState.keys.shift) || mouseState.buttons.right) {
 				this.publish("orbitControl", mouseState.downPos2dDelta, mouseState.camera.startTheta, mouseState.camera.startPhi);
 			}
 
